@@ -69,27 +69,32 @@ package model;
     public boolean play() {
         if (food>0){
             System.out.println(name + " Cat play whith game");
+            return true;
         } else {
             System.out.println(name + " didn't play, give me food " +meow);
+            return false;
         }
-        return true;
+
 
     }
     public boolean sleep() {
         if (food>0){
             System.out.println(name + " sleep zzZZZzzZZZz");
+            return true;
         } else {
             System.out.println(name + " didn't sleep, give me food " +meow);
+            return false;
         }
-        return true;
     }
     public boolean chaseMouse() {
         if (food>0){
             System.out.println(name + " attak!!!");
+            return true;
         } else {
             System.out.println(name + " didn't chase, give me food " +meow);
+            return false;
         }
-        return true;
+
     }
     public int eat(int totFood,String foodName) {
         food=food+totFood;
@@ -110,11 +115,13 @@ package model;
 
     public boolean jump() {
         if (food>0){
-            System.out.println(name + " Cat play whith game");
+            System.out.println(name + " Cat jump on the chair");
+            return true;
         } else {
             System.out.println(name + " didn't jump, give me food " +meow);
+            return false;
         }
-        return true;
+
     }
 
     public boolean liveAnotherDay() {
@@ -124,19 +131,27 @@ package model;
             int rand1 = (int) rand;
             switch (rand1) {
                 case 1:
-                    jump();
+                    if (jump() == false){
+                        eat();
+                    }
                     break;
                 case 2:
                     eat();
                     break;
                 case 3:
-                    chaseMouse();
+                    if (chaseMouse() == false){
+                        eat();
+                    }
                     break;
                 case 4:
-                    sleep();
+                    if (sleep() == false){
+                        eat();
+                    }
                     break;
                 case 5:
-                    play();
+                    if (play() == false){
+                        eat();
+                    }
                     break;
                 case 6:
                     eat(2);
