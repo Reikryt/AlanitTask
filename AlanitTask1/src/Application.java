@@ -8,6 +8,6 @@ public class Application {
         siam.liveAnotherDay();
         System.out.println(siam.getName() + " " +siam.getWeight() + " kg." );
         System.out.println(siam.getMeow() == britan.getMeow()+" equals meow");
-        System.out.println(getTotexampl());
+        System.out.println(Kotik.getTotexampl() + " create objects");
     }
 }
