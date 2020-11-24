@@ -7,7 +7,7 @@ public class Application  {
         britan.setKotik(7,"Charli",6,"Myr myr",-2);
         siam.liveAnotherDay();
         System.out.println(siam.getName() + " " +siam.getWeight() + " kg." );
-        System.out.println(siam.getMeow().equals(britan.getMeow() + " equals meow"));
+        System.out.println(siam.getMeow().equals(britan.getMeow()) + " equals meow");
         System.out.println(Kotik.getTotexampl() + " create objects");
     }
 }
