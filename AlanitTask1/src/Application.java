@@ -1,6 +1,6 @@
 import model.Kotik;
 
-public class Application extends Kotik {
+public class Application {
     public static void main(String[] args) {
         Kotik siam = new Kotik(5,6,"jessi", "mrrrr",-5);
         Kotik britan = new Kotik();
